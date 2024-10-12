@@ -2,6 +2,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -14,4 +17,9 @@
   --global-background: #13181e;
   --global-background-color: #0d1115;
   --global-color: #0093c4;
+  --global-link-color: #8b96a3;
+}
+
+a, button {
+  cursor: pointer;
 }

@@ -1,0 +1,129 @@
+.header {
+  height: 70px;
+  padding: 10px 0;
+  background: black;
+  &__block {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+  &__left {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    column-gap: 10px;
+  }
+  &__catalog {
+    cursor: pointer;
+    width: 114px;
+    height: 50px;
+    background: var(--global-color);
+    border-radius: 8px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    column-gap: 10px;
+    p {
+      font-weight: 500;
+      color: white;
+    }
+
+    &-burger {
+      background: white;
+      width: 20px;
+      height: 2px;
+      position: relative;
+    }
+
+    &-burger::before,
+    &-burger::after {
+      content: '';
+      background: white;
+      width: 20px;
+      height: 2px;
+      position: absolute;
+      left: 0;
+    }
+
+    &-burger::before {
+      top: -6px;
+    }
+
+    &-burger::after {
+      top: 6px;
+    }
+  }
+
+  &__list {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    column-gap: 10px;
+  }
+  &__link {
+    display: inline-block;
+    width: 60px;
+    height: 39px;
+    p {
+      font-size: 12px;
+      color: var(--global-link-color);
+    }
+    &-icons {
+      width: 24px;
+      height: 24px;
+      color: var(--global-link-color);
+    }
+  }
+  &__logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__info {
+    background: #0d1115;
+    width: 48px;
+    height: 45px;
+    border-radius: 12px;
+    background: var(--global-background-color);
+  }
+  &__help {
+    color: #8b96a3;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 10px;
+    left: 12px;
+  }
+}
+.number {
+  &__block {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    column-gap: 20px;
+  }
+  &__order, &__support {
+    flex-direction: column;
+    a {
+      font-family: Arial, sans-serif;
+      margin-bottom: 4px;
+      color: white;
+    }
+    p {
+      font-size: 12px;
+      color: var(--global-link-color);
+    }
+  }
+}
+
+.search {
+  width: 596px;
+  height: 50px;
+  background: #ECEFF2;
+  padding: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+}
