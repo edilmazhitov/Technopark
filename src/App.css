@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1470px;
+  padding: 0 18px;
+  margin: 0 auto;
+}
+
+:root {
+  --global-background: #13181e;
+  --global-background-color: #0d1115;
+  --global-color: #0093c4;
+}
