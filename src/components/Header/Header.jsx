@@ -6,6 +6,7 @@ import { MdOutlineLocalGroceryStore } from "react-icons/md";
 import { AiFillHeart } from "react-icons/ai";
 import { CiUser } from "react-icons/ci";
 import { MdOutlineInsertChartOutlined } from "react-icons/md";
+import BurgerMenu from "../BurgerMenu/BurgerMenu.jsx";
 
 const Header = () => {
     return (
@@ -13,16 +14,15 @@ const Header = () => {
             <div className="container">
                 <div className="header__block">
                     <div className="header__left">
-
                         <img src={Logo} className='header__logo' alt=""/>
                         <div role='button' className="header__catalog">
-                            <div className="header__catalog-burger"></div>
+                            <BurgerMenu/>
                             <span>Каталог</span>
                         </div>
                         <input
                             className='search'
                             type="text"
-                            placeholder="Искать Товары"
+                            placeholder="Ис кать Товары"
                         />
                     </div>
 
