@@ -7,6 +7,7 @@ import { AiFillHeart } from "react-icons/ai";
 import { CiUser } from "react-icons/ci";
 import { MdOutlineInsertChartOutlined } from "react-icons/md";
 import BurgerMenu from "../BurgerMenu/BurgerMenu.jsx";
+import SearchBlock from "../SearhBlock/SearchBlock.jsx";
 
 const Header = () => {
     return (
@@ -19,11 +20,7 @@ const Header = () => {
                             <BurgerMenu/>
                             <span>Каталог</span>
                         </div>
-                        <input
-                            className='search'
-                            type="text"
-                            placeholder="Ис кать Товары"
-                        />
+                        <SearchBlock/>
                     </div>
 
                     <ul className='header__list'>
