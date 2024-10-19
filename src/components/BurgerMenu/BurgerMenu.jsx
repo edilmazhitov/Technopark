@@ -35,6 +35,11 @@ function BurgerMenu() {
                         <li><a href="#services">Услуги</a></li>
                         <li><a href="#contact">Контакты</a></li>
                     </ul>
+                    <ul>
+                        <li>link</li>
+                        <li>link</li>
+                        <li></li>
+                    </ul>
                 </nav>
             )}
         </div>

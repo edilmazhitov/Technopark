@@ -9,6 +9,8 @@ import { MdOutlineInsertChartOutlined } from "react-icons/md";
 import BurgerMenu from "../BurgerMenu/BurgerMenu.jsx";
 import SearchBlock from "../SearhBlock/SearchBlock.jsx";
 
+import {Link} from 'react-router-dom'
+
 const Header = () => {
     return (
         <header className='header'>
@@ -45,11 +47,11 @@ const Header = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="" className="header__link">
+                            <Link to='/Login' className="header__link">
                                 <CiUser className='header__link-icons'/>
                                 <p>Войти</p>
 
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <div className="number">

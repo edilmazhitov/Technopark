@@ -8,15 +8,55 @@ import smartSeacrh from '../../assets/smart-search-img.jpg';
 import giftCard from '../../assets/gift-card-img.jpg';
 import newDyson from '../../assets/newDyson.jpg';
 import covers from '../../assets/covers.jpg';
+import globalSlidePhotoOne from '../../assets/globall-slider-images-one.jpg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 
+
+
 const Home = () => {
     return (
         <main>
+            <section className="slider">
+                <div className="container">
+
+                    <Swiper
+
+                        modules={[Navigation, Pagination]}
+                        spaceBetween={0}
+                        slidesPerView={1}
+                        navigation
+                        pagination={{ clickable: true}}
+
+                    >
+                        <SwiperSlide>
+                            <a href="">
+                                <img src={globalSlidePhotoOne} className='slider__img' alt=""/>
+                            </a>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <a href="">
+                                <img src={globalSlidePhotoOne} className='slider__img' alt=""/>
+                            </a>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <a href="">
+                                <img src={globalSlidePhotoOne} className='slider__img' alt=""/>
+                            </a>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <a href="">
+                                <img src={globalSlidePhotoOne} className='slider__img' alt=""/>
+                            </a>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+            </section>
+
+
             <section className="brand">
                 <div className="container">
                     <div className="brand__block">
