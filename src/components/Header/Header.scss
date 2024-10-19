@@ -2,7 +2,11 @@
   height: 70px;
   padding: 10px 0;
   background: black;
-
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
   &__block {
     justify-content: space-between;
     align-items: center;
@@ -111,9 +115,10 @@
       font-family: Arial, sans-serif;
       margin-bottom: 4px;
       color: white;
+      font-size: 16px;
     }
     p {
-      font-size: 12px;
+      font-size: 14px;
       color: var(--global-link-color);
     }
   }

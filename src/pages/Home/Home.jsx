@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import './Home.scss';
 import QYRON from '../../assets/QYRON-images.jpg';
 import inovationImages from '../../assets/Inovation-images.jpg';
@@ -28,7 +29,7 @@ const Home = () => {
                                 pagination={{ clickable: true }}
                             >
                                 <SwiperSlide>
-                                    <a href="">
+                                    <Link to='/qyron'>
 
                                         <div className="brand__nav-block">
                                             <div className="brand__nav-circle">
@@ -36,7 +37,7 @@ const Home = () => {
                                                 <p className='brand__nav-text'>QYRON</p>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <a href="">
@@ -50,7 +51,7 @@ const Home = () => {
                                     </a>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <a href="">
+                                    <Link to='/Smart'>
 
                                         <div className="brand__nav-block">
                                             <div className="brand__nav-circle">
@@ -58,7 +59,7 @@ const Home = () => {
                                                 <p className='brand__nav-text'>Smart Search</p>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <a href="">
