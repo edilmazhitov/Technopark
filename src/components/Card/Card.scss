@@ -1,0 +1,49 @@
+.card {
+  width: 277px;
+  height: 385.67px;
+  background: black;
+  border: none;
+  border-radius: 16px;
+  &__block {
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+  &__right {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    column-gap: 10px;
+  }
+  &__price {
+    color: white;
+  }
+  &__btn {
+    width: 36px;
+    height: 36px;
+    background: orangered;
+    border: none;
+    border-radius: 50%;
+    &-icons {
+      width: 20px;
+      height: 20px;
+      color: white;
+      background: transparent;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__favorites {
+    width: 24px;
+    height: 24px;
+    background: none;
+    color: var(--global-link-color);
+  }
+  &__comparison {
+    color: var(--global-link-color);
+    width: 24px;
+    height: 24px;
+    background: transparent;
+  }
+}

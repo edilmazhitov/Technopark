@@ -14,6 +14,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
+import Card from "../../components/Card/Card.jsx";
 
 
 
@@ -22,7 +23,6 @@ const Home = () => {
         <main>
             <section className="slider">
                 <div className="container">
-
                     <Swiper
 
                         modules={[Navigation, Pagination]}
@@ -65,7 +65,7 @@ const Home = () => {
                                 modules={[Navigation, Pagination]}
                                 spaceBetween={50}
                                 slidesPerView={6}
-                                navigation
+                                navigation={true}
                                 pagination={{ clickable: true }}
                             >
                                 <SwiperSlide>
@@ -148,6 +148,8 @@ const Home = () => {
                             </Swiper>
                         </nav>
                     </div>
+
+                    <Card/>
                 </div>
             </section>
         </main>
