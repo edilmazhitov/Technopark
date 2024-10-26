@@ -5,7 +5,7 @@ import { MdHelpCenter } from "react-icons/md";
 import { MdOutlineLocalGroceryStore } from "react-icons/md";
 import { AiFillHeart } from "react-icons/ai";
 import { CiUser } from "react-icons/ci";
-import { MdOutlineInsertChartOutlined } from "react-icons/md";
+import { LiaSignalSolid } from "react-icons/lia";
 import BurgerMenu from "../BurgerMenu/BurgerMenu.jsx";
 import SearchBlock from "../SearhBlock/SearchBlock.jsx";
 
@@ -28,7 +28,7 @@ const Header = () => {
                     <ul className='header__list'>
                         <li>
                             <a href="" className="header__link">
-                            <MdOutlineInsertChartOutlined className='header__link-icons'/>
+                            <LiaSignalSolid className='header__link-icons'/>
                                 <p>Сравнение</p>
 
                             </a>

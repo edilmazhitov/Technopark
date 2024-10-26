@@ -14,8 +14,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
-import Card from "../../components/Card/Card.jsx";
-
 
 
 const Home = () => {
@@ -148,8 +146,6 @@ const Home = () => {
                             </Swiper>
                         </nav>
                     </div>
-
-                    <Card/>
                 </div>
             </section>
         </main>

@@ -1,10 +1,10 @@
 import React from 'react';
+import Card from "../../components/Card/Card.jsx";
 
 const Login = () => {
     return (
         <div>
-            <h1>
-                Авторизация</h1>
+            <Card/>
         </div>
     );
 };
