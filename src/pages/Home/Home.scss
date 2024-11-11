@@ -5,13 +5,14 @@
     height: 100%;
   }
 }
-
+.main {
+  background: var(--global-background);
+}
 
 
 
 .brand {
   height: 200px;
-  background: #13181e;
   padding: 50px 0 0;
   &__nav {
     padding: 0 90px;
@@ -58,6 +59,73 @@
         align-items: center;
         font-weight: 400;
         color: gray;
+      }
+    }
+  }
+}
+
+
+.bestsellers {
+  height: 444px;
+  &__title {
+    font-size: 29px;
+    color: white;
+  }
+}
+
+.promotions {
+  height: 261px;
+
+  &__block {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &__bonus, &__discounts {
+    img {
+      width: 580px;
+      height: 230px;
+      border-radius: 16px;
+    }
+  }
+}
+
+
+.news {
+  height: 441px;
+  &__title {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 500;
+    color: white;
+  }
+}
+
+.popular {
+  height: 509px;
+  &__title  {
+    font-size: 29px;
+    font-weight: 500;
+    text-align: left;
+    color: white;
+  }
+  &__block {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 20px 0;
+  }
+  &__link {
+    &-box {
+      width: 200px;
+      height: 200px;
+      background: var(--global-background-two);
+      border-radius: 32px;
+      display: inline-block;
+      &:hover {
+        background: #252d32;
       }
     }
   }

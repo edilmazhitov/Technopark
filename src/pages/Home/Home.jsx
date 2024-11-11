@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {Link} from 'react-router-dom'
 import './Home.scss';
 import QYRON from '../../assets/QYRON-images.jpg';
@@ -9,16 +9,19 @@ import giftCard from '../../assets/gift-card-img.jpg';
 import newDyson from '../../assets/newDyson.jpg';
 import covers from '../../assets/covers.jpg';
 import globalSlidePhotoOne from '../../assets/globall-slider-images-one.jpg'
+import bonusOne from '../../assets/bonus-one.jpg'
+import bonusTwo from '../../assets/bonus-two.jpg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
+import Card from "../../components/Card/Card.jsx";
 
 
 const Home = () => {
     return (
-        <main>
+        <main className='main'>
             <section className="slider">
                 <div className="container">
                     <Swiper
@@ -148,6 +151,100 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <section className="bestsellers">
+                <div className="container">
+                    <div className="bestsellers__block">
+                        <div className="bestsellers__left">
+                            <h1 className="bestsellers__title">
+                                Хиты продаж
+                            </h1>
+                        </div>
+                        <div className="bestsellers__right">
+
+                            <div className="bestsellers__slider">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="promotions">
+                <div className="container">
+                    <div className="promotions__block">
+                        <a className="promotions__bonus" href='#'>
+                            <img src={bonusOne} alt=""/>
+                        </a>
+                        <a className="promotions__discounts" href='#'>
+                            <img src={bonusTwo} alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section className="news">
+                <div className="container">
+
+                    <div className="news__block">
+                        <div className="news__left">
+                            <h1 className="news__title">
+                                Новинки
+                            </h1>
+                        </div>
+                        <div className="news__right">
+
+                            <div className="news__slider">
+                                <Card/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="popular">
+                <div className="container">
+                    <h1 className='popular__title'>Популярные категории</h1>
+                    <div className="popular__block">
+                        <a href="" className="popular__link-box">
+                        </a>
+                        <a className="popular__link-box">
+
+                        </a>
+                        <a className="popular__link-box">
+
+                        </a>
+                        <a className="popular__link-box">
+
+                        </a>
+                        <a className="popular__link-box">
+
+                        </a>
+                        <a className="popular__link-box">
+
+                        </a>
+                    </div>
+                    <div className="popular__block">
+                        <a href="" className="popular__link-box">
+                        </a>
+                        <a className="popular__link-box">
+
+                        </a>
+                        <a className="popular__link-box">
+
+                        </a>
+                        <a className="popular__link-box">
+
+                        </a>
+                        <a className="popular__link-box">
+
+                        </a>
+                        <a className="popular__link-box">
+
+                        </a>
+                    </div>
+                </div>
+            </section>
+
         </main>
     );
 };

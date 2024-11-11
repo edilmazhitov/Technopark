@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Card.scss';
 import axios from 'axios';
 import { MdFavoriteBorder, MdOutlineLocalGroceryStore } from "react-icons/md";
 import { LiaSignalSolid } from "react-icons/lia";
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Card = () => {
@@ -19,12 +19,7 @@ const Card = () => {
     }, []);
 
     return (
-        <div style={{
-            background: 'black',
-            height: '100vh',
-            padding: '20px',
-            overflowY: 'auto'
-        }}>
+        <div>
             {products && products.length > 0 ? (
                 products.map((item) => (
                     <div className='card' key={item.id}>
