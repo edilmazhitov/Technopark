@@ -245,6 +245,24 @@ const Home = () => {
                 </div>
             </section>
 
+            <section className="popularBrands">
+                <div className="container">
+                    <div className="popularBrands__block">
+                        <div className="popularBrands__information">
+                            <h1 className='popularBrands__title'>Популярные бренды</h1>
+                        </div>
+                        <div className="popularBrands__box-block">
+                            <div className="popularBrands__box"></div>
+                            <div className="popularBrands__box"></div>
+                            <div className="popularBrands__box"></div>
+                            <div className="popularBrands__box"></div>
+                            <div className="popularBrands__box"></div>
+                            <div className="popularBrands__box"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
     );
 };

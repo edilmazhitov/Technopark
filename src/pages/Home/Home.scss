@@ -130,3 +130,25 @@
     }
   }
 }
+
+.popularBrands {
+  height: 143px;
+  &__title {
+    font-size: 29px;
+    font-weight: 500;
+    text-align: left;
+    color: white;
+    padding: 0 0 20px;
+  }
+  &__box {
+    width: 208.8px;
+    height: 84px;
+    background: white;
+    border-radius: 16px;
+    &-block {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+    }
+  }
+}

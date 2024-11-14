@@ -61,12 +61,11 @@
     width: 20px;
     height: 20px;
   }
-}
-
-.card__add-to-cart {
-  width: 36px;
-  height: 36px;
-  background: orangered;
-  border: none;
-  border-radius: 50%;
+  &__add-to-cart {
+    width: 36px;
+    height: 36px;
+    background: orangered;
+    border: none;
+    border-radius: 50%;
+  }
 }
