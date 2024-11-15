@@ -6,12 +6,6 @@
       "login": "Max Birimkukov",
       "password": "nedohacker",
       "balance": 0
-    },
-    {
-      "email": "zusupovaerkinai@gmail.com",
-      "password": "$2a$10$9W4BmjCDOlkxaxPQJ8RlnuULc8rc5YQcFarz0OYmTHgo7H781gEvO",
-      "name": "Edill0a1d",
-      "id": 2
     }
   ],
   "products": [
@@ -22,6 +16,33 @@
       "description": "Смартфон Samsung Galaxy S24 FE с объемом памяти 256 ГБ — идеальный выбор для тех, кто ценит стиль и производительность. Высококачественная камера, мощный процессор и элегантный дизайн обеспечат комфортное использование устройства в любых условиях.",
       "price": 69990,
       "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/760820/1_760820.jpg?timestamp=2024-09-26_18-43-45",
+      "quantity": 10
+    },
+    {
+      "id": 3,
+      "type": "Смартфон",
+      "title": "Смартфон Apple iPhone 16 256 ГБ ультрамарин",
+      "description": "Смартфон Apple iPhone 16 256 ГБ ультрамарин – флагман с 6.7-дюймовым OLED-дисплеем ProMotion, процессором A18 Bionic и 48 МП камерой. Элегантный ультрамариновый корпус, iOS 18, 256 ГБ памяти и поддержка быстрой зарядки делают его идеальным выбором для работы и развлечений.",
+      "price": 133990,
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/248_248/758129/1_758129.jpg?timestamp=2024-09-10_20-21-36",
+      "quantity": 0
+    },
+    {
+      "id": 4,
+      "type": "Смартфон",
+      "title": "Смартфон Samsung Galaxy Z Fold 6 512 ГБ серебристый без",
+      "description": "Смартфон Samsung Galaxy Z Fold 6 512 ГБ серебристый – инновационное устройство с гибким 7.6-дюймовым AMOLED-дисплеем, мощным процессором Snapdragon 8 Gen 3 и емкостью памяти 512 ГБ. Идеально подходит для многозадачности, работы и развлечений.",
+      "price": 197990,
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/747621/1_747621.jpg?timestamp=2024-07-09_11-50-17",
+      "quantity": 10
+    },
+    {
+      "id": 5,
+      "type": "Смартфон",
+      "title": "Смартфон Samsung Galaxy S24 Ultra 256 ГБ жёлтый",
+      "description": "Смартфон Samsung Galaxy S24 Ultra 256 ГБ жёлтый. Экран 6.8 Dynamic AMOLED 2X, камера 200 Мп, память 256 ГБ.",
+      "price": 130990,
+      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/713895/1_713895.jpg",
       "quantity": 10
     }
   ]

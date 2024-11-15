@@ -16,7 +16,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
-import Card from "../../components/Card/Card.jsx";
 
 
 const Home = () => {
@@ -160,7 +159,6 @@ const Home = () => {
                             </h1>
                         </div>
                         <div className="bestsellers__right">
-
                             <div className="bestsellers__slider">
 
                             </div>
@@ -194,7 +192,6 @@ const Home = () => {
                         <div className="news__right">
 
                             <div className="news__slider">
-                                <Card/>
                             </div>
                         </div>
                     </div>

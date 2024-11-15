@@ -41,10 +41,10 @@ const Header = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="" className="header__link">
+                            <Link to="/Cart" className="header__link">
                                 <MdOutlineLocalGroceryStore className='header__link-icons'/>
                                 <p>Корзина</p>
-                            </a>
+                            </Link>
                         </li>
                         <li>
                             <Link to='/Login' className="header__link">

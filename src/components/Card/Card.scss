@@ -1,3 +1,12 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 16px;
+  gap: 16px;
+}
+
 .card {
   width: 277px;
   height: 385.67px;
@@ -6,9 +15,12 @@
   background: white;
   margin: 0 auto;
   padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+
   &__img {
     width: 180px;
     transition: 1s;
@@ -16,21 +28,29 @@
       width: 150px;
     }
   }
-  &__type, &__availability {
+
+  &__type,
+  &__availability {
     font-size: 12px;
     color: var(--global-link-color);
     text-align: center;
   }
+
   &__wrapper {
     justify-content: space-between;
     align-items: center;
     display: flex;
     padding: 10px;
+    width: 100%;
+  }
+
+  &__right {
+    justify-content: center;
+    display:flex;
   }
   &__availability {
     padding: 10px 0;
     span {
-
       width: 6px;
       height: 6px;
       border: none;
@@ -38,34 +58,43 @@
       background: red;
     }
   }
+
   &__title {
     font-size: 14px;
     font-weight: 600;
     line-height: 17px;
     padding: 10px 0;
   }
+
   &__price {
     font-size: 16px;
   }
+
   &__favorites,
-  &__comparison{
+  &__comparison {
     border: none;
+    background: transparent;
     &-icon {
       color: var(--global-link-color);
       width: 24px;
       height: 24px;
     }
   }
+
   &__basket-icon {
     color: white;
     width: 20px;
     height: 20px;
   }
+
   &__add-to-cart {
     width: 36px;
     height: 36px;
     background: orangered;
     border: none;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

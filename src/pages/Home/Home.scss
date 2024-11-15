@@ -71,6 +71,10 @@
     font-size: 29px;
     color: white;
   }
+  &__right {
+    display:flex;
+    flex-wrap: wrap;
+  }
 }
 
 .promotions {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './ Navbar.scss';
+import './Navbar.scss';
 import { FaLocationPin } from "react-icons/fa6";
 
 
@@ -79,7 +79,7 @@ const Navbar = () => {
                 </div>
 
             </div>
-            <div className="navbar__line"></div>
+            {/*<div className="navbar__line"></div>*/}
         </section>
     );
 };
