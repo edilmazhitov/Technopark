@@ -9,3 +9,56 @@
   border-radius: 8px;
   font-size: 16px;
 }
+
+@media (max-width:1320px) {
+  .search {
+  width: 430px;
+  height: 45px;
+  }
+}
+@media (max-width:1200px) {
+  .search {
+    width: 370px;
+  }
+}
+
+
+@media (max-width: 1060px) {
+  .search {
+    width: 330px;
+  }
+}
+
+@media (max-width:1024px) {
+  .search {
+    width: 400px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .search {
+    width: 360px;
+  }
+}
+
+@media (max-width: 800px) {
+  .search {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search {
+    display: none;
+  }
+}
+
+@media (max-width:576px) {
+  .search {
+    display: none;
+  }
+}
+@media (max-width:425px) {
+
+}

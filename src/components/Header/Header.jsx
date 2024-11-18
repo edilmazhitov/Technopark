@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.scss';
+import './HeaderMedia.scss';
 import Logo from '../../assets/Logo.ico'
 import { MdHelpCenter } from "react-icons/md";
 import { MdOutlineLocalGroceryStore } from "react-icons/md";

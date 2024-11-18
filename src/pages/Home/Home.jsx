@@ -16,46 +16,48 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
-import Card from '../../components/Card/Card'
-
+// import Card from '../../components/Card/Card'
+import yandex from '../../assets/Yandex.png'
 
 const Home = () => {
     return (
         <main className='main'>
-            <section className="slider">
-                <div className="container">
-                    <Swiper
 
-                        modules={[Navigation, Pagination]}
-                        spaceBetween={0}
-                        slidesPerView={1}
-                        navigation
-                        pagination={{ clickable: true}}
+            <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={0}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                style={{ width: '100%' }}
+            >
+                <SwiperSlide>
+                    <a href="/Smart">
+                        <img src={globalSlidePhotoOne} className="slider__img" alt="Слайд 1"/>
+                    </a>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <a href="/Smart">
+                        <img src={globalSlidePhotoOne} className="slider__img" alt="Слайд 1"/>
+                    </a>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <a href="/Smart">
+                        <img src={globalSlidePhotoOne} className="slider__img" alt="Слайд 1"/>
+                    </a>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <a href="/Smart">
+                        <img src={globalSlidePhotoOne} className="slider__img" alt="Слайд 1"/>
+                    </a>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <a href="/Smart">
+                        <img src={globalSlidePhotoOne} className="slider__img" alt="Слайд 1"/>
+                    </a>
+                </SwiperSlide>
 
-                    >
-                        <SwiperSlide>
-                            <a href="">
-                                <img src={globalSlidePhotoOne} className='slider__img' alt=""/>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <a href="">
-                                <img src={globalSlidePhotoOne} className='slider__img' alt=""/>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <a href="">
-                                <img src={globalSlidePhotoOne} className='slider__img' alt=""/>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <a href="">
-                                <img src={globalSlidePhotoOne} className='slider__img' alt=""/>
-                            </a>
-                        </SwiperSlide>
-                    </Swiper>
-                </div>
-            </section>
+            </Swiper>
 
 
             <section className="brand">
@@ -191,8 +193,24 @@ const Home = () => {
                             </h1>
                         </div>
                         <div className="news__right">
-                                    <Card/>
+
                             <div className="news__slider">
+                                <Swiper
+                                    modules={[Navigation, Pagination]}
+                                    spaceBetween={50}
+                                    slidesPerView={6}
+                                    navigation={true}
+                                    pagination={{ clickable: true }}
+                                    style={{
+                                        alignItems: 'center',
+                                        display: 'flex',
+                                        flexWrap: "wrap"
+                                    }}
+                                >
+                                    <SwiperSlide>
+                                        {/*<Card/>*/}
+                                    </SwiperSlide>
+                                </Swiper>
                             </div>
                         </div>
                     </div>
@@ -250,12 +268,16 @@ const Home = () => {
                             <h1 className='popularBrands__title'>Популярные бренды</h1>
                         </div>
                         <div className="popularBrands__box-block">
-                            <div className="popularBrands__box"></div>
-                            <div className="popularBrands__box"></div>
-                            <div className="popularBrands__box"></div>
-                            <div className="popularBrands__box"></div>
-                            <div className="popularBrands__box"></div>
-                            <div className="popularBrands__box"></div>
+                            <a href='#' className="popularBrands__box"><img
+                                src='https://cdn1.technopark.ru/technopark/photos_resized/section_brand_300_100/300_100/40364/1_40364.png'
+                                alt="" className='popularBrands__icon'/></a>
+
+                            <a href='#' className="popularBrands__box"><img src={yandex} alt="" className='popularBrands__icon'/></a>
+                            <a href='#' className="popularBrands__box"><img src="https://cdn1.technopark.ru/technopark/photos_resized/section_brand_300_100/300_100/40303/1_40303.png" alt="" className='popularBrands__icon'/></a>
+
+                            <a href='#' className="popularBrands__box"><img src='https://cdn1.technopark.ru/technopark/photos_resized/section_brand_300_100/300_100/40283/1_40283.png' alt="" className='popularBrands__icon'/></a>
+                            <a href='#' className="popularBrands__box"><img src='https://cdn1.technopark.ru/technopark/photos_resized/section_brand_300_100/300_100/702360/1_702360.png' alt="" className='popularBrands__icon'/></a>
+                            <a href='#' className="popularBrands__box"><img src='https://cdn1.technopark.ru/technopark/photos_resized/section_brand_300_100/300_100/281007/1_281007.png' alt="" className='popularBrands__icon'/></a>
                         </div>
                     </div>
                 </div>

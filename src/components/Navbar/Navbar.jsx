@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.scss';
+import './NavbarMedia.scss';
 import { FaLocationPin } from "react-icons/fa6";
 
 
