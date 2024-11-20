@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar/Navbar.jsx";
 const Root = () => {
     return (
         <>
-            {/*<Navbar/>*/}
+            <Navbar/>
             <Header/>
             <Outlet/>
         </>

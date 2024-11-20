@@ -20,6 +20,13 @@
       "id": 3,
       "login": "Эдил Мажитов",
       "balance": 0
+    },
+    {
+      "email": "zusupovaerkainai@gmail.com",
+      "password": "$2a$10$aE0CmFIqEOd9sbdigrtLb.lAPbfHkzo9bfkh2ief49ECgZ8y6Md/y",
+      "id": 4,
+      "login": "Эдил Мажитов",
+      "balance": 0
     }
   ],
   "products": [

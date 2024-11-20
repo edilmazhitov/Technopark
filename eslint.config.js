@@ -33,6 +33,8 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      // Отключаем правило для неиспользуемых переменных
+      'no-unused-vars': 'off',  // или 'warn' для предупреждений, а не ошибок
     },
   },
 ]

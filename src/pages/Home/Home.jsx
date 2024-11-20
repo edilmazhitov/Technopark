@@ -16,7 +16,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
-// import Card from '../../components/Card/Card'
+import Card from '../../components/Card/Card'
 import yandex from '../../assets/Yandex.png'
 
 const Home = () => {
@@ -193,7 +193,7 @@ const Home = () => {
                             </h1>
                         </div>
                         <div className="news__right">
-
+                                        <Card/>
                             <div className="news__slider">
                                 <Swiper
                                     modules={[Navigation, Pagination]}
@@ -208,7 +208,6 @@ const Home = () => {
                                     }}
                                 >
                                     <SwiperSlide>
-                                        {/*<Card/>*/}
                                     </SwiperSlide>
                                 </Swiper>
                             </div>

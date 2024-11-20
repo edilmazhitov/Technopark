@@ -16,9 +16,9 @@ const Register = () => {
         const newUserId = userId;
         const newUser = {
             id: newUserId,
-            email: email,
+            email,
             login: name,
-            password: password,
+            password,
             balance: 0
         };
 
@@ -145,7 +145,9 @@ const Register = () => {
                     </div>
 
                     <button type="submit" disabled={status === 'loading'}>Зарегистрироваться</button>
-
+                    <p>
+                        Не первый раз? <a href="/Login">Войти</a>
+                    </p>
                     {status === 'error' ? <p className="register__error">Ошибка при регистрации</p> :
                         status === 'success' ? <p className="register__error" style={{ color: 'green' }}>Успешная регистрация</p> :
                             status === 'loading' ? <p className="register__error" style={{ color: 'yellow' }}>Загрузка обработки данных</p> : ''}

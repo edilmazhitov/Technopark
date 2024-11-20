@@ -79,24 +79,4 @@
     margin-bottom: 30px;
     color: #333;
   }
-
-  @media (max-width: 768px) {
-    padding: 20px;
-
-    .container {
-      padding: 20px;
-    }
-
-    &__title {
-      font-size: 28px;
-    }
-
-    &__form {
-      gap: 15px;
-
-      button {
-        font-size: 16px;
-      }
-    }
-  }
 }

@@ -26,14 +26,6 @@ const router = createBrowserRouter([
                 element: <Smart/>
             },
             {
-              path: 'register',
-              element: <Register/>
-            },
-            {
-              path: 'login',
-              element: <Login/>
-            },
-            {
                 path: 'cart',
                 element: <Cart/>
             },
@@ -42,7 +34,15 @@ const router = createBrowserRouter([
                 element: <NotFound/>
             }
         ]
-    }
+    },
+    {
+        path: 'register',
+        element: <Register/>
+    },
+    {
+        path: 'login',
+        element: <Login/>
+    },
 ])
 
 export default router

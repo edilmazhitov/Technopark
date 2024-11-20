@@ -12,6 +12,10 @@
     "dev": "concurrently \"npm run start\" \"npm run server\""
   },
   "dependencies": {
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@mui/material": "^6.1.7",
+    "@mui/styled-engine-sc": "^6.1.7",
     "@reduxjs/toolkit": "^2.3.0",
     "axios": "^1.7.7",
     "chance": "^1.1.12",
@@ -26,6 +30,7 @@
     "react-router-dom": "^6.27.0",
     "react-toastify": "^10.0.6",
     "sass": "^1.79.5",
+    "styled-components": "^6.1.13",
     "swiper": "^11.1.14",
     "uuid": "^10.0.0"
   },

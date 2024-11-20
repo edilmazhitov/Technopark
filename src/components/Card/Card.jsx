@@ -1,22 +1,23 @@
 import { useEffect, useState } from 'react';
 import './Card.scss';
-import axios from 'axios';
 import { MdFavoriteBorder, MdFavorite, MdOutlineLocalGroceryStore } from "react-icons/md";
 import { LiaSignalSolid } from "react-icons/lia";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { getAllProducts } from "../../store/reducers/products.js";
+import { useDispatch, useSelector } from "react-redux";
 const Card = () => {
     const [products, setProducts] = useState([]);
-    const [favorites, setFavorites] = useState([]); // Состояние для избранного
-    const [cart, setCart] = useState([]); // Состояние для корзины
+    const [favorites, setFavorites] = useState([]);
+    const [cart, setCart] = useState([]);
 
+
+    const { data, status, error } = useSelector((state) => state.products);
+
+    const dispatch = useDispatch();
     useEffect(() => {
-        axios('http://localhost:8080/products')
-            .then((res) => setProducts(res.data || []))
-            .catch((error) => console.error('Error fetching products:', error));
-    }, []);
-
+        dispatch(getAllProducts());
+    }, [dispatch]);
     const toggleFavorite = (id) => {
         if (favorites.includes(id)) {
             setFavorites(favorites.filter((favId) => favId !== id));
@@ -39,8 +40,8 @@ const Card = () => {
 
     return (
         <div className="cards-container">
-            {products && products.length > 0 ? (
-                products.map((item) => (
+            {data && data.length > 0 ? (
+                data.map((item) => (
                     <div className="card" key={item.id}>
                         <img src={item.img} alt={item.title} className="card__img" />
                         <p className="card__type">{item.type}</p>
