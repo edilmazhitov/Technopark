@@ -6,6 +6,20 @@
       "login": "Max Birimkukov",
       "password": "SeniorFront-End_Devoper1!",
       "balance": 0
+    },
+    {
+      "email": "zusupovaerkinai@gmail.com",
+      "password": "$2a$10$s9bv1N1eUpmHy0vEFJuTfuyA333n0oMk0eGUjfdfDFfZGhFZEpkvq",
+      "id": 2,
+      "login": "Эдил Мажитов",
+      "balance": 0
+    },
+    {
+      "email": "zusupovaerkinaai@gmail.com",
+      "password": "$2a$10$BZVld.GQcsF/fflXmeNyFeOxwPJJXxPY3B82AjTkRSxKVa0R35FOi",
+      "id": 3,
+      "login": "Эдил Мажитов",
+      "balance": 0
     }
   ],
   "products": [
