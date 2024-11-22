@@ -7,6 +7,8 @@ import NotFound from "../pages/NotFound/NotFound";
 import Register from "../pages/Register/Register";
 import Login from '../pages/Login/Login'
 import Cart from '../pages/Cart/Cart'
+import Favorites from "../pages/Favorites/Favorites";
+import Profile from '../pages/Profile/Profile'
 
 const router = createBrowserRouter([
     {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
             {
                 path: 'cart',
                 element: <Cart/>
+            },
+            {
+                path: 'favorites',
+                element: <Favorites/>
+            },
+            {
+                path: 'profile',
+                element: <Profile/>
             },
             {
                 path: '*',

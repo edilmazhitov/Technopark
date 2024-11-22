@@ -3,10 +3,19 @@ import './Register.scss';
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../../store/reducers/user.js";
+import { Navigate } from "react-router-dom";
 
 const Register = () => {
     const [userId, setUserId] = useState(1);
-    const { register, handleSubmit, formState: { errors }, reset, watch, trigger, getValues } = useForm({ mode: "onBlur" });
+    const {
+        register,
+        handleSubmit,
+        formState: {errors },
+        reset,
+        watch,
+        trigger,
+        getValues
+    } = useForm({ mode: "onBlur" });
     const dispatch = useDispatch();
     const { status, error } = useSelector(state => state.user);
 
@@ -29,6 +38,7 @@ const Register = () => {
 
     useEffect(() => {
         if (status === 'success') {
+            // return <Navigate to='/'/>
             reset();
         }
     }, [status, reset]);
@@ -48,7 +58,9 @@ const Register = () => {
 
         return () => subscription.unsubscribe();
     }, [watch, trigger]);
-
+    if (status === 'success') {
+        return <Navigate to='/'/>
+    }
     return (
         <section className='register'>
             <div className="container">

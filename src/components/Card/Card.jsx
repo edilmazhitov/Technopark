@@ -1,42 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './Card.scss';
 import { MdFavoriteBorder, MdFavorite, MdOutlineLocalGroceryStore } from "react-icons/md";
 import { LiaSignalSolid } from "react-icons/lia";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { getAllProducts } from "../../store/reducers/products.js";
 import { useDispatch, useSelector } from "react-redux";
+import { getAllProducts } from "../../store/reducers/products.js";
+
 const Card = () => {
-    const [products, setProducts] = useState([]);
-    const [favorites, setFavorites] = useState([]);
-    const [cart, setCart] = useState([]);
-
-
-    const { data, status, error } = useSelector((state) => state.products);
-
+    const { data } = useSelector((state) => state.products);
     const dispatch = useDispatch();
+
     useEffect(() => {
         dispatch(getAllProducts());
     }, [dispatch]);
-    const toggleFavorite = (id) => {
-        if (favorites.includes(id)) {
-            setFavorites(favorites.filter((favId) => favId !== id));
-            toast("Товар удалён из избранного");
-        } else {
-            setFavorites([...favorites, id]);
-            toast("Товар добавлен в избранное");
-        }
-    };
-
-    const toggleCart = (id) => {
-        if (cart.includes(id)) {
-            setCart(cart.filter((cartId) => cartId !== id));
-            toast("Товар удалён из корзины");
-        } else {
-            setCart([...cart, id]);
-            toast("Товар добавлен в корзину");
-        }
-    };
 
     return (
         <div className="cards-container">
@@ -54,30 +29,14 @@ const Card = () => {
                                 <h3 className="card__price">{item.price} ₽</h3>
                             </div>
                             <div className="card__right">
-                                <button
-                                    className="card__favorites"
-                                    onClick={() => toggleFavorite(item.id)}
-                                >
-                                    {favorites.includes(item.id) ? (
-                                        <MdFavorite className="card__favorites-icon" />
-                                    ) : (
-                                        <MdFavoriteBorder className="card__favorites-icon" />
-                                    )}
+                                <button className="card__favorites">
+                                    <MdFavoriteBorder className="card__favorites-icon" />
                                 </button>
                                 <button className="card__comparison">
                                     <LiaSignalSolid className="card__comparison-icon" />
                                 </button>
-                                <button
-                                    className="card__add-to-cart"
-                                    onClick={() => toggleCart(item.id)}
-                                >
-                                    <MdOutlineLocalGroceryStore
-                                        className={
-                                            cart.includes(item.id)
-                                                ? 'card__basket-icon active'
-                                                : 'card__basket-icon'
-                                        }
-                                    />
+                                <button className="card__add-to-cart">
+                                    <MdOutlineLocalGroceryStore className="card__basket-icon" />
                                 </button>
                             </div>
                         </div>

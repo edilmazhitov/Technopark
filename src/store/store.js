@@ -1,10 +1,23 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { rememberReducer, rememberEnhancer } from 'redux-remember';
 import user from "./reducers/user";
 import products from './reducers/products'
+import favorites from './reducers/favorites'
 
-export const store = configureStore({
-    reducer: {
+const rememberedKeys = [ 'user', 'products', 'favorites' ]
+
+const store = configureStore({
+    reducer: rememberReducer({
         user,
-        products
-    }
+        products,
+        favorites
+    }),
+    enhancers: (getDefaultEnhancers) => getDefaultEnhancers().concat(
+        rememberEnhancer(
+            window.localStorage, // or window.sessionStorage, or your own custom storage driver
+            rememberedKeys
+        )
+    )
 })
+
+export default store

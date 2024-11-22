@@ -9,29 +9,15 @@
     },
     {
       "email": "zusupovaerkinai@gmail.com",
-      "password": "$2a$10$s9bv1N1eUpmHy0vEFJuTfuyA333n0oMk0eGUjfdfDFfZGhFZEpkvq",
+      "password": "$2a$10$DaZPdiwUIA1u9JJztmG2s.fBLmDPHiM5ZUcnlL0MZYCVNYx/DtqKm",
       "id": 2,
-      "login": "Эдил Мажитов",
-      "balance": 0
-    },
-    {
-      "email": "zusupovaerkinaai@gmail.com",
-      "password": "$2a$10$BZVld.GQcsF/fflXmeNyFeOxwPJJXxPY3B82AjTkRSxKVa0R35FOi",
-      "id": 3,
-      "login": "Эдил Мажитов",
-      "balance": 0
-    },
-    {
-      "email": "zusupovaerkainai@gmail.com",
-      "password": "$2a$10$aE0CmFIqEOd9sbdigrtLb.lAPbfHkzo9bfkh2ief49ECgZ8y6Md/y",
-      "id": 4,
       "login": "Эдил Мажитов",
       "balance": 0
     }
   ],
   "products": [
     {
-      "id": 2,
+      "id": 1,
       "type": "Смартфон",
       "title": "Смартфон Samsung Galaxy S24 FE зелёный",
       "description": "Смартфон Samsung Galaxy S24 FE с объемом памяти 256 ГБ — идеальный выбор для тех, кто ценит стиль и производительность. Высококачественная камера, мощный процессор и элегантный дизайн обеспечат комфортное использование устройства в любых условиях.",
@@ -40,7 +26,7 @@
       "quantity": 10
     },
     {
-      "id": 3,
+      "id": 2,
       "type": "Смартфон",
       "title": "Смартфон Apple iPhone 16 256 ГБ ультрамарин",
       "description": "Смартфон Apple iPhone 16 256 ГБ ультрамарин – флагман с 6.7-дюймовым OLED-дисплеем ProMotion, процессором A18 Bionic и 48 МП камерой. Элегантный ультрамариновый корпус, iOS 18, 256 ГБ памяти и поддержка быстрой зарядки делают его идеальным выбором для работы и развлечений.",
@@ -49,7 +35,7 @@
       "quantity": 0
     },
     {
-      "id": 4,
+      "id": 3,
       "type": "Смартфон",
       "title": "Смартфон Samsung Galaxy Z Fold 6 512 ГБ серебристый без",
       "description": "Смартфон Samsung Galaxy Z Fold 6 512 ГБ серебристый – инновационное устройство с гибким 7.6-дюймовым AMOLED-дисплеем, мощным процессором Snapdragon 8 Gen 3 и емкостью памяти 512 ГБ. Идеально подходит для многозадачности, работы и развлечений.",
@@ -58,7 +44,7 @@
       "quantity": 10
     },
     {
-      "id": 5,
+      "id": 4,
       "type": "Смартфон",
       "title": "Смартфон Samsung Galaxy S24 Ultra 256 ГБ жёлтый",
       "description": "Смартфон Samsung Galaxy S24 Ultra 256 ГБ жёлтый. Экран 6.8 Dynamic AMOLED 2X, камера 200 Мп, память 256 ГБ.",

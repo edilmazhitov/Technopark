@@ -5,15 +5,11 @@ export const getAllProducts = createAsyncThunk(
     'get/getAllProducts',
     async (arg, {rejectWithValue}) => {
         try {
-
             const res = await axios('http://localhost:5000/products')
-
             if (res.status !== 200) {
                 throw new Error('Ошибка при получение продуктов')
             }
-
             return res.data
-
         } catch (err) {
             return rejectWithValue(err.message)
         }

@@ -70,7 +70,6 @@
     font-size: 16px;
   }
 
-  &__favorites,
   &__comparison {
     border: none;
     background: transparent;
@@ -80,7 +79,15 @@
       height: 24px;
     }
   }
-
+  &__favorites {
+    background: transparent;
+    border: none;
+    &-icon {
+      width: 24px;
+      height: 24px;
+      color: red;
+    }
+  }
   &__basket-icon {
     color: white;
     width: 20px;
