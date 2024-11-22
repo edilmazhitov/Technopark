@@ -4,7 +4,7 @@ import user from "./reducers/user";
 import products from './reducers/products'
 import favorites from './reducers/favorites'
 
-const rememberedKeys = [ 'user', 'products', 'favorites' ]
+const rememberedKeys = [ 'user', 'products', 'favorites']
 
 const store = configureStore({
     reducer: rememberReducer({

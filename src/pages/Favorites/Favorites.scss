@@ -1,0 +1,9 @@
+.favorites {
+  background: black;
+  height: 100vh;
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}

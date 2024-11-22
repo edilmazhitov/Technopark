@@ -10,7 +10,7 @@ const favoritesSlice = createSlice({
             if (state.data.includes(action.payload)) {
                 state.data = state.data.filter((id) => id !== action.payload);
             } else {
-                state.data.push(action.payload);
+                state.data = [...state.data, action.payload]
             }
         },
     },

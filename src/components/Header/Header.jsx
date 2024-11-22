@@ -11,12 +11,9 @@ import BurgerMenu from "../../components/BurgerMenu/BurgerMenu.jsx";
 import SearchBlock from '../../components/SearhBlock/SearchBlock'
 import { Link, useNavigate } from 'react-router-dom';
 import {useDispatch, useSelector} from "react-redux";
-import {logOut} from "../../store/reducers/user";
 
 const Header = () => {
     const user = useSelector(s => s.user)
-
-    const dispath = useDispatch()
 
     return (
         <header className='header'>
@@ -36,7 +33,7 @@ const Header = () => {
                             <LiaSignalSolid className='header__link-icons'/>
                             <p>Сравнение</p>
                         </Link>
-                        <Link to="#" className="header__link">
+                        <Link to="/favorites" className="header__link">
                             <AiFillHeart className='header__link-icons'/>
                             <p>Избранное</p>
                         </Link>

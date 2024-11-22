@@ -16,9 +16,12 @@ const Profile = () => {
     if (status === 'idle') {
         return <Navigate to='/'/>
     }
+
     return (
         <div>
             <h1>Профиль</h1>
+            <p>{user.login}</p>
+            р1
             {user.status === 'success' && <button onClick={() => dispatch(logOut())}>Выйти из акаунта</button>}
         </div>
     );

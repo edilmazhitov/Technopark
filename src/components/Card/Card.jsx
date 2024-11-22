@@ -4,10 +4,15 @@ import { MdFavoriteBorder, MdFavorite, MdOutlineLocalGroceryStore } from "react-
 import { LiaSignalSolid } from "react-icons/lia";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../store/reducers/products.js";
+// import {addCart} from "../../store/reducers/carts.js";
+import {toggleFavorites} from "../../store/reducers/favorites.js";
 
 const Card = () => {
     const { data } = useSelector((state) => state.products);
     const dispatch = useDispatch();
+    // const carts = useSelector((state) => state.carts)
+
+    const favorites = useSelector((state) => state.favorites )
 
     useEffect(() => {
         dispatch(getAllProducts());
@@ -29,8 +34,11 @@ const Card = () => {
                                 <h3 className="card__price">{item.price} ₽</h3>
                             </div>
                             <div className="card__right">
-                                <button className="card__favorites">
-                                    <MdFavoriteBorder className="card__favorites-icon" />
+                                <button className="card__favorites" onClick={() => dispatch(toggleFavorites(item.id))}>
+                                    {
+                                        favorites.data.includes(item.id) ?  <MdFavorite className='card__favorites-icon'/>
+                                            : <MdFavoriteBorder className="card__favorites-icon"/>
+                                    }
                                 </button>
                                 <button className="card__comparison">
                                     <LiaSignalSolid className="card__comparison-icon" />
