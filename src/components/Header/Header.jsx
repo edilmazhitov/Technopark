@@ -44,35 +44,18 @@ const Header = () => {
                             <MdOutlineLocalGroceryStore className='header__link-icons'/>
                             <p>Корзина</p>
                         </Link>
-                        <Link to='/Login' className='header__link'>
-                            <CiUser className='header__link-icons'/>
-                            <p>Войти</p>
-                        </Link>
                         {
-                            user.status === 'success' && <button onClick={() => dispath(logOut())}>Выйти</button>
-
+                            user.status === 'success' ?
+                            <Link to='/profile' className='header__link'>
+                                <CiUser className='header__link-icons'/>
+                                <p>Профиль</p>
+                            </Link> :
+                                <Link to='/Login' className='header__link'>
+                                    <CiUser className='header__link-icons'/>
+                                    <p>Войти</p>
+                                </Link>
                         }
-                        {/*/!* Отображение ссылки на профиль или кнопку для входа *!/*/}
-                        {/*{user ? (*/}
-                        {/*    <>*/}
-                        {/*        <Link to="/Profile" className='header__link'>*/}
-                        {/*            <CiUser className='header__link-icons' />*/}
-                        {/*            <p>Профиль</p>*/}
-                        {/*        </Link>*/}
-                        {/*        <div className='header__link' onClick={handleLogout}>*/}
-                        {/*            <CiUser className='header__link-icons' />*/}
-                        {/*            <p>Выйти</p>*/}
-                        {/*        </div>*/}
-                        {/*    </>*/}
-                        {/*) : (*/}
-                        {/*    <Link to='/Login' className="header__link">*/}
-                        {/*        <CiUser className='header__link-icons' />*/}
-                        {/*        <p>Войти</p>*/}
-                        {/*    </Link>*/}
-                        {/*)}*/}
-                        {
 
-                        }
                     </div>
 
                     <div className="number">

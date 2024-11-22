@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import '../Register/Register.scss';
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
