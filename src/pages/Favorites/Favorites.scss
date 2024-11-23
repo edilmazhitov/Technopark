@@ -1,9 +1,104 @@
 .favorites {
   background: black;
-  height: 100vh;
-  &__block {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+  height: 100ch;
+  &__card {
+    width: 1145px;
+    height: 263px;
+    background: white;
+    border-radius: 16px;
+
+    &-block {
+      justify-content: left;
+      display: flex;
+      position: relative;
+    }
+
+    &-wrapper {
+      width: 610px;
+    }
+
+    &-img {
+      width: 207px;
+      height: 227px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    &-img-container {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+    }
+
+    &-type {
+      padding: 0 0 0 60px;
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--global-link-color);
+    }
+
+    &-title {
+      padding: 0 0 0 60px;
+      margin-top: 5px;
+      font-size: 16px;
+    }
+
+    &-code {
+      padding: 0 0 0 60px;
+      margin-top: 5px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--global-link-color);
+    }
+
+    &-description {
+      padding: 0 0 0 60px;
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--global-link-color);
+
+      span {
+        font-size: 12px;
+        color: black;
+      }
+    }
+
+    &-add {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    &-actions {
+      background: gray;
+      width: 317px;
+      height: 263px;
+      border-radius: 0 16px 16px 0;
+      padding: 10px;
+    }
+    &-circle {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+  }
+
+  .card {
+    &__img {
+      padding: 15px;
+      width: 200px;
+      position: relative;
+      object-fit: cover;
+    }
+
+    &__favorites {
+      transform: translate(-20px, -110px);
+      cursor: pointer;
+    }
   }
 }

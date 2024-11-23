@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../store/reducers/products.js";
 // import {addCart} from "../../store/reducers/carts.js";
 import {toggleFavorites} from "../../store/reducers/favorites.js";
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 
 const Card = () => {
     const { data } = useSelector((state) => state.products);
@@ -19,7 +21,7 @@ const Card = () => {
     }, [dispatch]);
 
     return (
-        <div className="cards-container">
+        <div className="card-container">
             {data && data.length > 0 ? (
                 data.map((item) => (
                     <div className="card" key={item.id}>
@@ -53,6 +55,12 @@ const Card = () => {
             ) : (
                 <p style={{ color: 'white' }}>Нет доступных продуктов для отображения</p>
             )}
+            <div className="card__pagination">
+                <Stack spacing={2}>
+                    <Pagination count={10} shape="rounded" />
+                </Stack>
+            </div>
+
         </div>
     );
 };

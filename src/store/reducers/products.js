@@ -23,7 +23,9 @@ const products = createSlice({
         data: [],
         status: 'idle',
         error: null,
-        filter: {}
+        filter: {
+            page: 1
+        }
     },
     reducers: {},
     extraReducers: (builder) => {
