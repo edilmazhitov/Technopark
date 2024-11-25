@@ -1,12 +1,12 @@
 .favorites {
   background: black;
-  height: 100ch;
+  height: auto;
   &__card {
+    margin: 0 0 10px;
     width: 1145px;
     height: 263px;
     background: white;
     border-radius: 16px;
-
     &-block {
       justify-content: left;
       display: flex;
@@ -75,7 +75,7 @@
     }
 
     &-actions {
-      background: gray;
+      background: #eceff2;
       width: 317px;
       height: 263px;
       border-radius: 0 16px 16px 0;
@@ -85,6 +85,31 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
+    }
+    &-quantity, &-delivery, &-pickup
+    {
+      padding: 2px 0;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 0fr 1fr;
+      column-gap: 10px;
+      p {
+        color: #8b96a3;
+        font-size: 14px;
+      }
+    }
+    &-icons {
+      color: aqua;
+      width: 8px;
+      height: 8px;
+    }
+
+    &-price {
+      font-size: 20px;
+      font-weight: 500;
+      &-wrapper {
+        padding: 50px 0 0;
+      }
     }
   }
 
@@ -101,4 +126,64 @@
       cursor: pointer;
     }
   }
+}
+
+.add-to-cart {
+  margin: 20px 0;
+  width: 266px;
+  height: 36px;
+  border-radius: 16px;
+  border: none;
+  background: orangered;
+  span {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.favorites {
+  display: flex;
+  gap: 30px;
+}
+
+.favorites__block {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.favorites__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex: 1;
+}
+
+.aside {
+  width: 250px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  position: sticky;
+  top: 20px;
+}
+
+.filter {
+  margin-bottom: 15px;
+}
+
+.filter label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.filter select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }

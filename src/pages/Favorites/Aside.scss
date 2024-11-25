@@ -1,0 +1,40 @@
+.favorites {
+  display: flex;
+  gap: 30px;
+}
+
+.favorites__block {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.aside {
+  width: 250px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  position: sticky;
+  top: 20px;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.filter {
+  margin-bottom: 15px;
+}
+
+.filter label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.filter select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
