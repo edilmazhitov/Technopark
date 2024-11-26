@@ -47,7 +47,7 @@ const Login = () => {
                     <div className='register__block'>
                         <input
                             {...register('password')}
-                            placeholder='Придумайте пароль'
+                            placeholder='Введите пароль'
                             type={'password'}
                             autoComplete="new-password"
                         />
@@ -57,7 +57,7 @@ const Login = () => {
                     </div>
                     <button type="submit">Войти</button>
                     <p>
-                        Первый раз? <a href="/Login">Пройдите Регистрацию</a>
+                        Первый раз? <a href="/Register">Пройдите Регистрацию</a>
                     </p>
                     {/*{status === 'error' ? <p className="register__error">Ошибка при регистрации</p> :*/}
                     {/*    // status === 'success' ? <p className="register__error" style={{ color: 'green' }}>Успешная регистрация</p> :*/}

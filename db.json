@@ -9,9 +9,9 @@
     },
     {
       "email": "zusupovaerkinai@gmail.com",
-      "password": "$2a$10$DaZPdiwUIA1u9JJztmG2s.fBLmDPHiM5ZUcnlL0MZYCVNYx/DtqKm",
+      "password": "$2a$10$KyTFqeyI65.m7K68wjHXZefgKbmcAVxXa/nuKHUshwtKiayf..LMy",
       "id": 2,
-      "login": "Эдил Мажитов",
+      "login": "Эдил Ма",
       "balance": 0
     }
   ],
@@ -45,42 +45,6 @@
     },
     {
       "id": 4,
-      "type": "Смартфон",
-      "title": "Samsung Galaxy S24 Ultra 256 ГБ жёлтый",
-      "description": "Смартфон Samsung Galaxy S24 Ultra 256 ГБ жёлтый. Экран 6.8 Dynamic AMOLED 2X, камера 200 Мп, память 256 ГБ.",
-      "price": 130990,
-      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/713895/1_713895.jpg",
-      "quantity": 0
-    },
-    {
-      "id": 5,
-      "type": "Смартфон",
-      "title": "Samsung Galaxy S24 Ultra 256 ГБ жёлтый",
-      "description": "Смартфон Samsung Galaxy S24 Ultra 256 ГБ жёлтый. Экран 6.8 Dynamic AMOLED 2X, камера 200 Мп, память 256 ГБ.",
-      "price": 130990,
-      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/713895/1_713895.jpg",
-      "quantity": 0
-    },
-    {
-      "id": 6,
-      "type": "Смартфон",
-      "title": "Samsung Galaxy S24 Ultra 256 ГБ жёлтый",
-      "description": "Смартфон Samsung Galaxy S24 Ultra 256 ГБ жёлтый. Экран 6.8 Dynamic AMOLED 2X, камера 200 Мп, память 256 ГБ.",
-      "price": 130990,
-      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/713895/1_713895.jpg",
-      "quantity": 0
-    },
-    {
-      "id": 7,
-      "type": "Смартфон",
-      "title": "Samsung Galaxy S24 Ultra 256 ГБ жёлтый",
-      "description": "Смартфон Samsung Galaxy S24 Ultra 256 ГБ жёлтый. Экран 6.8 Dynamic AMOLED 2X, камера 200 Мп, память 256 ГБ.",
-      "price": 130990,
-      "img": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/713895/1_713895.jpg",
-      "quantity": 0
-    },
-    {
-      "id": 8,
       "type": "Смартфон",
       "title": "Samsung Galaxy S24 Ultra 256 ГБ жёлтый",
       "description": "Смартфон Samsung Galaxy S24 Ultra 256 ГБ жёлтый. Экран 6.8 Dynamic AMOLED 2X, камера 200 Мп, память 256 ГБ.",
