@@ -1,9 +1,8 @@
 import './App.css'
 import {RouterProvider} from "react-router-dom";
-import router from "./routing/routing.jsx";
-import {ToastContainer, toast} from "react-toastify";
+import router from "./routing/routing";
+import {ToastContainer} from "react-toastify";
 
-// ])
 
 function App() {
   return (

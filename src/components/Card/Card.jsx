@@ -4,15 +4,11 @@ import { MdFavoriteBorder, MdFavorite, MdOutlineLocalGroceryStore } from "react-
 import { LiaSignalSolid } from "react-icons/lia";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../store/reducers/products.js";
-// import {addCart} from "../../store/reducers/carts.js";
 import {toggleFavorites} from "../../store/reducers/favorites.js";
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
 
 const Card = () => {
     const { data } = useSelector((state) => state.products);
     const dispatch = useDispatch();
-    // const carts = useSelector((state) => state.carts)
 
     const favorites = useSelector((state) => state.favorites )
 
@@ -28,6 +24,9 @@ const Card = () => {
                         <img src={item.img} alt={item.title} className="card__img" />
                         <p className="card__type">{item.type}</p>
                         <h3 className="card__title">{item.title}</h3>
+                        <p className="card__number">
+                           код : {item.id}
+                        </p>
                         <p className="card__availability">
                             {item.quantity > 0 ? 'В наличии' : 'Товара нет в наличии'}
                         </p>
@@ -55,11 +54,6 @@ const Card = () => {
             ) : (
                 <p style={{ color: 'white' }}>Нет доступных продуктов для отображения</p>
             )}
-            <div className="card__pagination">
-                <Stack spacing={2}>
-                    <Pagination count={10} shape="rounded" />
-                </Stack>
-            </div>
 
         </div>
     );

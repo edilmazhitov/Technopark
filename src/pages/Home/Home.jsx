@@ -1,6 +1,7 @@
 
 import {Link} from 'react-router-dom'
 import './Home.scss';
+import './HomeMedia.scss';
 import QYRON from '../../assets/QYRON-images.jpg';
 import inovationImages from '../../assets/Inovation-images.jpg';
 import BORK from '../../assets/BORK-images.jpg';
@@ -8,52 +9,48 @@ import smartSeacrh from '../../assets/smart-search-img.jpg';
 import giftCard from '../../assets/gift-card-img.jpg';
 import newDyson from '../../assets/newDyson.jpg';
 import covers from '../../assets/covers.jpg';
-import globalSlidePhotoOne from '../../assets/globall-slider-images-one.jpg'
 import bonusOne from '../../assets/bonus-one.jpg'
 import bonusTwo from '../../assets/bonus-two.jpg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Card from '../../components/Card/Card'
 import yandex from '../../assets/Yandex.png'
 
 const Home = () => {
+
+
     return (
         <main className='main'>
 
             <Swiper
-                modules={[Navigation, Pagination]}
+                modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={0}
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                speed={5000}
                 style={{ width: '100%' }}
             >
-                <SwiperSlide>
-                    <a href="/Smart">
-                        <img src={globalSlidePhotoOne} className="slider__img" alt="Слайд 1"/>
+                <SwiperSlide className='swiper-slide'>
+                    <a href="#">
+                        <img src='https://cdn2.technopark.ru/technopark/original/banner_gif_v2_main_top_2120_500/768754/1_768754.gif' className="slider__img" alt="Слайд 1"/>
                     </a>
                 </SwiperSlide>
-                <SwiperSlide>
-                    <a href="/Smart">
-                        <img src={globalSlidePhotoOne} className="slider__img" alt="Слайд 1"/>
+                <SwiperSlide className='swiper-slide'>
+                    <a href="#">
+                        <img src='https://cdn2.technopark.ru/technopark/original/banner_gif_v2_main_top_2120_500/765836/1_765836.gif' className="slider__img" alt="Слайд 1"/>
                     </a>
                 </SwiperSlide>
-                <SwiperSlide>
-                    <a href="/Smart">
-                        <img src={globalSlidePhotoOne} className="slider__img" alt="Слайд 1"/>
-                    </a>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <a href="/Smart">
-                        <img src={globalSlidePhotoOne} className="slider__img" alt="Слайд 1"/>
-                    </a>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <a href="/Smart">
-                        <img src={globalSlidePhotoOne} className="slider__img" alt="Слайд 1"/>
+                <SwiperSlide className='swiper-slide'>
+                    <a href="#">
+                        <img src='https://cdn2.technopark.ru/technopark/original/banner_gif_v2_main_top_2120_500/768754/1_768754.gif' className="slider__img" alt="Слайд 1"/>
                     </a>
                 </SwiperSlide>
 
@@ -193,7 +190,6 @@ const Home = () => {
                             </h1>
                         </div>
                         <div className="news__right">
-                                        <Card/>
                             <div className="news__slider">
                                 <Swiper
                                     modules={[Navigation, Pagination]}

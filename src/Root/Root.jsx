@@ -1,14 +1,14 @@
 import React from 'react';
-import Header from "../components/Header/Header.jsx";
+import Header from "../components/Header/Header";
 import {Outlet} from "react-router-dom";
-// import Navbar from "../components/Navbar/Navbar.jsx";
+import Footer from '../components/Footer/Footer';
 
 const Root = () => {
     return (
         <>
-            {/*<Navbar/>*/}
             <Header/>
             <Outlet/>
+            <Footer/>
         </>
     );
 };

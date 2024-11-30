@@ -9,6 +9,7 @@ import Login from '../pages/Login/Login'
 import Cart from '../pages/Cart/Cart'
 import Favorites from "../pages/Favorites/Favorites";
 import Profile from '../pages/Profile/Profile'
+import Catalog from "../pages/Catalog/Catalog.jsx";
 
 const router = createBrowserRouter([
     {
@@ -40,9 +41,13 @@ const router = createBrowserRouter([
                 element: <Profile/>
             },
             {
+                path: 'catalog',
+                element: <Catalog/>
+            },
+            {
                 path: '*',
                 element: <NotFound/>
-                }
+            }
         ]
     },
     {

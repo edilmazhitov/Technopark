@@ -36,9 +36,9 @@ const Header = () => {
                 <div className="header__block">
                     <div className="header__left">
                         <img src={Logo} className='header__logo' alt=""/>
-                        <div role='button' className="header__catalog">
+                        <Link to="/Catalog" role='button' className="header__catalog">
                             <span>Каталог</span>
-                        </div>
+                        </Link>
                         <SearchBlock/>
                     </div>
 
@@ -66,23 +66,14 @@ const Header = () => {
                                     <p>Войти</p>
                                 </Link>
                         }
-                         <button className="header__search-btn">
-                             <IoIosSearch className='header__search-icons'/>
-                         </button>
-                    </div>
-
-                    <div className='header__right'>
-                        <button className="number__button" onClick={togglePopup}>
-                            <RiCustomerService2Line className='number__button-icons'/>
+                        <button className="header__search-btn">
+                            <IoIosSearch className='header__search-icons'/>
                         </button>
-                        <div role='button' className="header__info">
-                            <MdHelpCenter className='header__help'/>
-                        </div>
                     </div>
                     <div className="number">
                         <div className="number__block">
                             <div className="number__order">
-                            <a href="tel:88001008899">
+                                <a href="tel:88001008899">
                                     8 (800) 100-88-99
                                 </a>
                                 <p>Оформить заказ</p>
@@ -93,6 +84,14 @@ const Header = () => {
                                 </a>
                                 <p>Служба поддержки</p>
                             </div>
+                        </div>
+                    </div>
+                    <div className='header__right'>
+                        <button className="number__button" onClick={togglePopup}>
+                            <RiCustomerService2Line className='number__button-icons'/>
+                        </button>
+                        <div role='button' className="header__info">
+                            <MdHelpCenter className='header__help'/>
                         </div>
                     </div>
 
