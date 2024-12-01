@@ -1,0 +1,296 @@
+
+@media (max-width:1200px) {
+  .footer {
+    &__contact,
+    &__company,
+    &__supports,
+    &__privileges{
+      &-title {
+        font-size: 16px;
+        margin: 0 0 12px;
+      }
+    }
+  }
+}
+@media (max-width:1100px) {
+  .footer {
+    &__block {
+      padding: 20px 0 0;
+    }
+
+  }
+}
+@media (max-width:1024px) {
+  .footer {
+    &__contact {
+      &-address {
+        font-size: 14px;
+      }
+      &-btn {
+        width: 180px;
+      }
+    }
+    &__company,
+    &__supports,
+    &__information,
+    &__privileges{
+      &-link {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width:992px) {
+  .footer {
+    &__block {
+      height: 330px;
+    }
+  }
+}
+
+@media (max-width:930px) {
+  .footer {
+    &__contact {
+      &-address {
+        font-size: 12px;
+      }
+      &-number {
+        font-size: 14px;
+      }
+    }
+    &__social {
+      &-item {
+        width: 40px;
+        height: 40px;
+      }
+      &-icons {
+        width: 22px;
+        height: 22px;
+        transform: translate(-3px, -3px);
+      }
+    }
+  }
+}
+@media (max-width:890px) {
+  .footer {
+
+    &__block {
+      height: 310px;
+    }
+
+    &__contact,
+    &__company,
+    &__supports,
+    &__privileges{
+      &-title {
+        margin: 0 0 10px;
+        font-size: 14px;
+      }
+      &-link {
+        font-size: 12px;
+      }
+      span {
+        width: 6px;
+        height: 6px;
+        margin-left: 6px;
+      }
+      &-btn {
+        width: 160px;
+        height: 45px;
+      }
+    }
+  }
+}
+@media (max-width:820px) {
+  .footer {
+
+    &__block {
+      justify-content: center;
+      column-gap: 16px;
+      height: 300px;
+    }
+
+    &__contact,
+    &__company,
+    &__supports,
+    &__privileges,
+    &__information{
+      &-title {
+        margin: 0;
+        font-size: 12px;
+      }
+      &-link {
+        font-size: 11px;
+      }
+      &-btn {
+        width: 140px;
+        height: 40px;
+        font-size: 14px;
+      }
+      &-address {
+        font-size: 10px;
+      }
+      &-number {
+        font-size: 12px;
+      }
+
+    }
+    &__social {
+      &-link {
+        width: 35px;
+        height: 35px;
+      }
+      &-icons {
+        width: 20px;
+        height: 20px;
+        transform: translate(-4px, -4px);
+      }
+    }
+  }
+}
+
+@media (max-width:768px) {
+  .footer {
+    &__block {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      height: 520px;
+    }
+    &__wrapper {
+      padding: 0;
+    }
+    &__contact {
+      &-social {
+        justify-content: flex-start;
+        padding: 16px 0 0;
+        column-gap: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+
+    &__block {
+      height: 420px;
+    }
+
+    &__contact,
+    &__company,
+    &__supports,
+    &__privileges,
+    &__information{
+      &-title {
+        margin: 0;
+        font-size: 10px;
+      }
+      &-link {
+        font-size: 11px;
+      }
+      &-list {
+        &-item {
+          padding: 4px 0 0;
+        }
+      }
+      &-btn {
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+      }
+      &-social {
+        column-gap: 8px;
+      }
+    }
+    &__social {
+      &-link {
+        width: 35px;
+        height: 35px;
+      }
+      &-icons {
+        width: 20px;
+        height: 20px;
+        transform: translate(-4px, -4px);
+      }
+    }
+  }
+}
+
+@media (max-width:450px) {
+  .footer {
+
+    &__block {
+      height: 420px;
+    }
+
+    &__contact,
+    &__company,
+    &__supports,
+    &__privileges,
+    &__information{
+      &-title {
+        font-size: 8px;
+      }
+      &-link {
+        font-size: 7px;
+      }
+      &-list {
+        &-item {
+          padding: 4px 0 0;
+        }
+      }
+      span {
+        width: 4px;
+        height: 4px;
+        margin-left: 4px;
+      }
+      &-social {
+        column-gap: 8px;
+      }
+      &-address {
+        font-size: 8px;
+      }
+      &-number {
+        font-size: 10px;
+      }
+    }
+    &__social {
+      &-link {
+        width: 30px;
+        height: 30px;
+      }
+      &-icons {
+        width: 16px;
+        height: 16px;
+        transform: translate(-5px, -6px);
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .footer {
+    &__block {
+      grid-template-columns: 1fr 1fr;
+      height: 470px;
+    }
+    &__contact,
+    &__company,
+    &__supports,
+    &__privileges,
+    &__information{
+      &-title {
+        font-size: 8px;
+      }
+      &-link {
+        font-size: 7px;
+      }
+      &-list {
+        &-item {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

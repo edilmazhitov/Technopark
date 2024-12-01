@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.scss';
+import './FooterMedia.scss';
 import { FaTelegramPlane, FaYoutube } from "react-icons/fa";
 import { SiOdnoklassniki } from "react-icons/si";
 import { IoLogoVk } from "react-icons/io5";
