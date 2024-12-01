@@ -13,8 +13,8 @@ const Card = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getAllProducts());
-    }, [dispatch]);
+        dispatch(getAllProducts(filter.filterPrice));
+    }, [dispatch, filter.filterPrice]);
 
     const handleFavorites = (itemId) => {
         if (favorites.data.includes(itemId)) {

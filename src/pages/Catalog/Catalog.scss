@@ -1,6 +1,13 @@
 .catalog {
   background: var(--global-background-two);
 
+  &__title {
+    text-align: center;
+    color: white;
+    font-size: 58px;
+    padding: 30px 0;
+  }
+
   &__pagination {
     justify-content: center;
     display: flex;

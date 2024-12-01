@@ -5,7 +5,14 @@ export const getAllProducts = createAsyncThunk(
     'get/getAllProducts',
     async (arg, {rejectWithValue}) => {
         try {
-            const res = await axios('http://localhost:5000/products')
+
+
+            let api = arg === 'default'
+                ? 'http://localhost:5000/products'
+                : `http://localhost:5000/products?_sort=price&_order=${arg}`
+
+
+            const res = await axios(api)
             if (res.status !== 200) {
                 throw new Error('Ошибка при получение продуктов')
             }
@@ -24,19 +31,23 @@ const products = createSlice({
         status: 'idle',
         error: null,
         filter: {
-            page: 1
+            page: 1,
+            filterPrice: 'default'
         }
     },
     reducers: {
         changePage : (state, action) => {
             state.filter.page = action.payload
+        },
+        changeFilterPrice : (state,action) => {
+            state.filter.filterPrice = action.payload
         }
     },
     extraReducers: (builder) => {
         builder
             .addCase(getAllProducts.pending, (state) => {
                 state.status = 'loading'
-                state.error = 'null'
+                state.error = null
             })
             .addCase(getAllProducts.rejected, (state, action) => {
                 state.status = 'error'
@@ -49,5 +60,5 @@ const products = createSlice({
     }
 })
 
-export const {changePage} = products.actions
+export const {changePage,changeFilterPrice} = products.actions
 export default products.reducer
