@@ -1,4 +1,3 @@
-// src/components/Favorites.js
 
 import React, { useState } from 'react';
 import './Favorites.scss';
@@ -6,8 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleFavorites } from '../../store/reducers/favorites.js';
 import { MdFavorite, MdFavoriteBorder } from 'react-icons/md';
 import { BsBoxFill } from 'react-icons/bs';
-import Aside from './Aside'; // Подключаем компонент Aside
-
+import Aside from './Aside';
+import {toast} from "react-toastify";
 import pickup from '../../assets/Logo.ico';
 
 const Favorites = () => {
@@ -17,7 +16,6 @@ const Favorites = () => {
 
     const [filteredData, setFilteredData] = useState(data);
 
-    // Функция для фильтрации
     const handleFilterChange = (filterName, filterValue) => {
         let filteredItems = [...data];
 
@@ -32,10 +30,13 @@ const Favorites = () => {
                 filteredItems = filteredItems.filter((item) => item.price > 10000);
             }
         }
-
-        setFilteredData(filteredItems);
     };
-
+    const handleFavorites = (itemId) => {
+        if (favorites.data.includes(itemId)) {
+            toast.error("Удалено из избранного!");
+        }
+        dispatch(toggleFavorites(itemId));
+    };
     return (
         <section className='favorites'>
             <div className='container'>
@@ -63,13 +64,13 @@ const Favorites = () => {
                                         </div>
                                         <div className='favorites__card-add'>
                                             <button
-                                                className='card__favorites'
-                                                onClick={() => dispatch(toggleFavorites(item.id))}
+                                                className="card__favorites"
+                                                onClick={() => handleFavorites(item.id)}
                                             >
                                                 {favorites.data.includes(item.id) ? (
-                                                    <MdFavorite className='card__favorites-icon' />
+                                                    <MdFavorite className="card__favorites-icon"/>
                                                 ) : (
-                                                    <MdFavoriteBorder className='card__favorites-icon' />
+                                                    <MdFavoriteBorder className="card__favorites-icon"/>
                                                 )}
                                             </button>
                                         </div>
@@ -78,7 +79,7 @@ const Favorites = () => {
                                                 <div className='favorites__card-quantity'>
                                                     <div
                                                         className='favorites__card-circle'
-                                                        style={{ backgroundColor: item.quantity === 0 ? 'red' : 'green' }}
+                                                        style={{backgroundColor: item.quantity === 0 ? 'red' : 'green'}}
                                                     ></div>
                                                     <p>{item.quantity > 0 ? `В наличии ${item.quantity}` : 'Товаров нет в наличии'}</p>
                                                 </div>

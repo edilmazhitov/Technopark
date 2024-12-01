@@ -4,17 +4,26 @@ import { MdFavoriteBorder, MdFavorite, MdOutlineLocalGroceryStore } from "react-
 import { LiaSignalSolid } from "react-icons/lia";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../store/reducers/products.js";
-import {toggleFavorites} from "../../store/reducers/favorites.js";
+import { toggleFavorites } from "../../store/reducers/favorites.js";
+import { toast } from "react-toastify";
 
 const Card = () => {
     const { data } = useSelector((state) => state.products);
+    const favorites = useSelector((state) => state.favorites);
     const dispatch = useDispatch();
-
-    const favorites = useSelector((state) => state.favorites )
 
     useEffect(() => {
         dispatch(getAllProducts());
     }, [dispatch]);
+
+    const handleFavorites = (itemId) => {
+        if (favorites.data.includes(itemId)) {
+            toast.error("Удалено из избранного!");
+        } else {
+            toast.success("Добавлено в избранное!");
+        }
+        dispatch(toggleFavorites(itemId));
+    };
 
     return (
         <div className="card-container">
@@ -24,9 +33,7 @@ const Card = () => {
                         <img src={item.img} alt={item.title} className="card__img" />
                         <p className="card__type">{item.type}</p>
                         <h3 className="card__title">{item.title}</h3>
-                        <p className="card__number">
-                           код : {item.id}
-                        </p>
+                        <p className="card__number">Код: {item.id}</p>
                         <p className="card__availability">
                             {item.quantity > 0 ? 'В наличии' : 'Товара нет в наличии'}
                         </p>
@@ -35,11 +42,15 @@ const Card = () => {
                                 <h3 className="card__price">{item.price} ₽</h3>
                             </div>
                             <div className="card__right">
-                                <button className="card__favorites" onClick={() => dispatch(toggleFavorites(item.id))}>
-                                    {
-                                        favorites.data.includes(item.id) ?  <MdFavorite className='card__favorites-icon'/>
-                                            : <MdFavoriteBorder className="card__favorites-icon"/>
-                                    }
+                                <button
+                                    className="card__favorites"
+                                    onClick={() => handleFavorites(item.id)}
+                                >
+                                    {favorites.data.includes(item.id) ? (
+                                        <MdFavorite className="card__favorites-icon" />
+                                    ) : (
+                                        <MdFavoriteBorder className="card__favorites-icon" />
+                                    )}
                                 </button>
                                 <button className="card__comparison">
                                     <LiaSignalSolid className="card__comparison-icon" />
@@ -54,7 +65,6 @@ const Card = () => {
             ) : (
                 <p style={{ color: 'white' }}>Нет доступных продуктов для отображения</p>
             )}
-
         </div>
     );
 };

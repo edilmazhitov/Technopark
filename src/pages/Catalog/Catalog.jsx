@@ -7,7 +7,6 @@ import './Catalog.scss';
 const Catalog = () => {
 
 
-
     return (
         <section className='catalog'>
             <div className="container">
