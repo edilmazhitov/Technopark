@@ -8,7 +8,7 @@ import { toggleFavorites } from "../../store/reducers/favorites.js";
 import { toast } from "react-toastify";
 
 const Card = () => {
-    const { data } = useSelector((state) => state.products);
+    const { data, filter } = useSelector((state) => state.products);
     const favorites = useSelector((state) => state.favorites);
     const dispatch = useDispatch();
 
@@ -28,7 +28,9 @@ const Card = () => {
     return (
         <div className="card-container">
             {data && data.length > 0 ? (
-                data.map((item) => (
+                data.filter((item, idx) => {
+                    return idx >= filter.page * 8 - 8 && idx < filter.page * 8
+                }).map((item) => (
                     <div className="card" key={item.id}>
                         <img src={item.img} alt={item.title} className="card__img" />
                         <p className="card__type">{item.type}</p>

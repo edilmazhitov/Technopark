@@ -27,7 +27,11 @@ const products = createSlice({
             page: 1
         }
     },
-    reducers: {},
+    reducers: {
+        changePage : (state, action) => {
+            state.filter.page = action.payload
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(getAllProducts.pending, (state) => {
@@ -45,4 +49,5 @@ const products = createSlice({
     }
 })
 
+export const {changePage} = products.actions
 export default products.reducer
