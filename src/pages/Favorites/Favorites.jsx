@@ -85,7 +85,7 @@ const Favorites = () => {
                                                 </div>
                                             </div>
                                             <div className='favorites__card-price-wrapper'>
-                                                <p className='favorites__card-price'>{item.price.toLocaleString()} ₽</p>
+                                                <p className='favorites__card-price'>{item.price.toLocaleString('ru-RU')} ₽</p>
                                             </div>
                                             <button className='add-to-cart'  onClick={() => handleCarts(item.id)} >
                                                 <span>В корзину</span>

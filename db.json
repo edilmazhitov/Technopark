@@ -8,18 +8,11 @@
       "balance": 0
     },
     {
-      "email": "zusupovaerkinai@gmail.com",
-      "password": "$2a$10$vZEYSuwiJvp7GjzvKQYjPeGE/1TxtMB6Ac1CeHW6PAbs99hwgyUce",
+      "email": "zusupovaerkinadi@gmail.com",
+      "password": "$2a$10$dTl32acWGIsbTd4D9PUi/.Xvdw6fN58k/5/UIFHsm2gYY/RIAunRG",
       "id": 2,
-      "login": "Эдил Мажиов",
-      "balance": 10000
-    },
-    {
-      "email": "zusupovaerkindai@gmail.com",
-      "password": "$2a$10$GdXkqKZwitVzXhpqUQtA3.2ErlET0VuCvqn7J3RxUw2QnJCET4Yvi",
-      "id": 3,
       "login": "Эдил Мажитов",
-      "balance": 10980
+      "balance": 0
     }
   ],
   "products": [
@@ -351,55 +344,55 @@
   "reviews": [
     {
       "id": 1,
-      "userName": "Максат",
-      "date": "10.10.2024",
-      "rating": 4,
+      "userName": "Max Birimkulov",
+      "date": "10.10.2024, 10:00",
+      "rating": 5,
       "text": "Отличный магазин!"
     }
   ],
   "orders": [
     {
-      "id": 1733477639016,
+      "id": 1733479808593,
       "user": {
-        "name": "Эдил Мажиов",
-        "email": "zusupovaerkinai@gmail.com",
-        "address": "guvofjcvhdjoc"
+        "name": "Эдил Мажитов",
+        "email": "zusupovaerkinadi@gmail.com",
+        "address": "мсчмссс"
+      },
+      "items": [
+        {
+          "id": 2,
+          "title": "Apple iPhone 16 256 ГБ ультрамарин",
+          "count": 1,
+          "price": 133990,
+          "total": 133990
+        },
+        {
+          "id": 3,
+          "title": "Samsung Galaxy Z Fold 6 512 ГБ серебристый без",
+          "count": 1,
+          "price": 197990,
+          "total": 197990
+        }
+      ],
+      "totalPrice": 331980
+    },
+    {
+      "id": 1733480321148,
+      "user": {
+        "name": "Эдил Мажитов",
+        "email": "zusupovaerkinadi@gmail.com",
+        "address": "мтммджмжзмп"
       },
       "items": [
         {
           "id": 1,
           "title": "Samsung Galaxy S24 FE зелёный",
-          "count": 1,
+          "count": 100,
           "price": 69990,
-          "total": 69990
+          "total": 6999000
         }
       ],
-      "totalPrice": 69990
-    },
-    {
-      "id": 1733478107043,
-      "user": {
-        "name": "Эдил Мажиов",
-        "email": "zusupovaerkinai@gmail.com",
-        "address": "fffffffssdfsdf"
-      },
-      "items": [
-        {
-          "id": 9,
-          "title": "Samsung Galaxy A35 128 ГБ тёмно-синий",
-          "count": 1,
-          "price": 37990,
-          "total": 37990
-        },
-        {
-          "id": 10,
-          "title": "Infinix Hot 40i 256 ГБ золотой",
-          "count": 1,
-          "price": 12990,
-          "total": 12990
-        }
-      ],
-      "totalPrice": 50980
+      "totalPrice": 6999000
     }
   ]
 }

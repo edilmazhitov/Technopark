@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
+import { useForm } from "react-hook-form";
 import { addOrderToServer } from "../../store/reducers/orderSlice";
 import { clearCart } from "../../store/reducers/carts";
 import { useNavigate } from "react-router-dom";
+import './CheckOut.scss'
 
 const CheckOut = () => {
     const { user } = useSelector((state) => state.user);
@@ -13,9 +15,17 @@ const CheckOut = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const [name, setName] = useState(user.login || "");
-    const [email, setEmail] = useState(user.email || "");
-    const [address, setAddress] = useState("");
+    const { register,
+        handleSubmit,
+        formState: { errors },
+        reset
+        } = useForm({
+        defaultValues: {
+            name: user.login || "",
+            email: user.email || "",
+            address: "",
+        },
+    });
 
     const cartsItems = products.data.filter((product) =>
         carts.data.some((cart) => cart.id === product.id)
@@ -26,18 +36,8 @@ const CheckOut = () => {
         return acc + product.price * cartItem.count;
     }, 0);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        if (!name.trim() || !email.trim() || !address.trim()) {
-            toast.error("Заполните все поля!");
-            return;
-        }
-
-        if (!/\S+@\S+\.\S+/.test(email)) {
-            toast.error("Введите корректный email!");
-            return;
-        }
+    const onSubmit = async (data) => {
+        const { name, email, address } = data;
 
         const order = {
             id: Date.now(),
@@ -60,9 +60,7 @@ const CheckOut = () => {
             dispatch(clearCart());
             toast.success("Заказ успешно оформлен!");
             navigate("/");
-            setName(user.login || "");
-            setEmail(user.email || "");
-            setAddress("");
+            reset(); // Сброс формы
         } catch (error) {
             toast.error("Ошибка при оформлении заказа: " + error);
         }
@@ -71,29 +69,37 @@ const CheckOut = () => {
     return (
         <section className="check-out">
             <div className="container">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <h2>Имя получателя</h2>
                     <input
                         type="text"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
                         placeholder="Введите ваше имя"
+                        {...register("name", { required: "Имя обязательно для заполнения" })}
                     />
+                    {errors.name && <p className="error">{errors.name.message}</p>}
+
                     <h2>Электронная почта</h2>
                     <input
                         type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
                         placeholder="Введите ваш email"
+                        {...register("email", {
+                            required: "Email обязателен для заполнения",
+                            pattern: {
+                                value: /\S+@\S+\.\S+/,
+                                message: "Введите корректный email",
+                            },
+                        })}
                     />
+                    {errors.email && <p className="error">{errors.email.message}</p>}
+
                     <h2>Адрес доставки</h2>
                     <textarea
                         cols="30"
                         rows="10"
-                        value={address}
-                        onChange={(e) => setAddress(e.target.value)}
                         placeholder="Введите ваш адрес доставки"
+                        {...register("address", { required: "Адрес обязателен для заполнения" })}
                     ></textarea>
+                    {errors.address && <p className="error">{errors.address.message}</p>}
 
                     <button type="submit" disabled={loading}>
                         {loading ? "Отправка..." : "Заказать"}

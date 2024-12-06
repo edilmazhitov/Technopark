@@ -3,7 +3,7 @@ import './Header.scss';
 import './HeaderMedia.scss';
 import Logo from '../../assets/Logo.ico';
 import { MdHelpCenter } from "react-icons/md";
-import { MdOutlineLocalGroceryStore } from "react-icons/md";
+import { MdOutlineLocalGroceryStore, MdOutlineRateReview } from "react-icons/md";
 import { AiFillHeart } from "react-icons/ai";
 import { CiUser } from "react-icons/ci";
 import { LiaSignalSolid } from "react-icons/lia";
@@ -44,9 +44,9 @@ const Header = () => {
                     </div>
 
                     <div className='header__list'>
-                        <Link to="" className="header__link">
-                            <LiaSignalSolid className='header__link-icons'/>
-                            <p>Сравнение</p>
+                        <Link to="/reviews" className="header__link">
+                            <MdOutlineRateReview className='header__link-icons'/>
+                            <p>Отзывы</p>
                         </Link>
                         <Link to="/favorites" className="header__link">
                             <AiFillHeart className='header__link-icons'/>
