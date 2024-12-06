@@ -1,0 +1,133 @@
+.cart {
+  padding: 50px 0;
+  height: 1000px;
+  justify-content: center;
+  align-items: center;
+  background: var(--global-background-two);
+  &__block {
+    padding: 30px 0;
+    justify-content: space-between;
+    display: flex;
+    width: 1380px;
+  }
+  &__title {
+    color: white;
+    font-size: 29px;
+    line-height: 30px;
+    font-weight: 600;
+  }
+  &__product-list {
+    width: 900px;
+    height: 178px;
+    background: white;
+    border-radius: 16px;
+    border: none;
+  }
+  &__wrapper {
+    width: 350px;
+    height: 66px;
+    background: white;
+    border-radius: 16px;
+    border: none;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 0 25px;
+  }
+  &__total {
+    &-title {
+      font-size: 20px;
+      font-weight: 600;
+
+    }
+    &-price {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  &__card {
+    &-block {
+      padding: 10px 15px;
+      width: 875px;
+      height: 134px;
+      align-items: center;
+      display: flex;
+    }
+    &-title {
+      font-size: 18px;
+      font-weight: 300;
+    }
+    &-code {
+      font-size: 14px;
+      color: gray;
+    }
+
+    &-img {
+      width: 102px;
+      height: 102px;
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+    }
+    &-left {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+
+    }
+    &-favorites {
+      background: transparent;
+      border: none;
+      &-icon {
+        width: 24px;
+        height: 24px;
+        color: red;
+      }
+    }
+
+  }
+  &__count {
+    width: 30px;
+    border-radius: 8px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    &-wrapper {
+      width: 100px;
+      height: 50px;
+      border: 3px solid var(--global-color);
+      border-radius: 16px;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      padding: 0 5px;
+    }
+
+    &-minus {
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      border: none;
+    }
+  }
+
+
+
+  &__count::-webkit-inner-spin-button,
+  &__count::-webkit-outer-spin-button {
+    display: none;
+  }
+
+}
+.card-add-to-cart {
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  &-icons {
+    width: 24px;
+    height: 24px;
+  }
+}

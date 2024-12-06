@@ -215,23 +215,7 @@ const Footer = () => {
             </div>
 
             <div className="footer__line-two"></div>
-            <div className="container">
-                <div className="footer__interaction">
-                    <div className="footer__interaction-left">
-                        <h2 className="footer__interaction-title">Подпишитесь на рассылку</h2>
-                        <p className="footer__interaction-desc">Будьте в курсе лучших предложений</p>
-                    </div>
-                    <form className="footer__interaction-form">
 
-                        <input type="email" placeholder='Электронная почта' required/>
-                        <button type='submit'>Подписаться</button>
-                    </form>
-                    <div className="footer__interaction-right">
-                        <img src='https://cdn.technopark.ru/source/custom_images/newsite/footer/yandex-rating.svg' alt=""/>
-                    </div>
-                </div>
-                <p className='license'>© 2006-2024 Technopark.ru</p>
-            </div>
         </footer>
     );
 };

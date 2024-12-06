@@ -5,49 +5,41 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleFavorites } from '../../store/reducers/favorites.js';
 import { MdFavorite, MdFavoriteBorder } from 'react-icons/md';
 import { BsBoxFill } from 'react-icons/bs';
-import Aside from './Aside';
 import {toast} from "react-toastify";
 import pickup from '../../assets/Logo.ico';
+import {addCart} from "../../store/reducers/carts.js";
 
 const Favorites = () => {
     const dispatch = useDispatch();
     const favorites = useSelector((state) => state.favorites);
     const { data } = useSelector((state) => state.products);
+    const cart = useSelector((state) => state.carts)
 
-    const [filteredData, setFilteredData] = useState(data);
-
-    const handleFilterChange = (filterName, filterValue) => {
-        let filteredItems = [...data];
-
-        if (filterName === 'type' && filterValue) {
-            filteredItems = filteredItems.filter((item) => item.type === filterValue);
-        }
-
-        if (filterName === 'price') {
-            if (filterValue === 'low') {
-                filteredItems = filteredItems.filter((item) => item.price <= 10000);
-            } else if (filterValue === 'high') {
-                filteredItems = filteredItems.filter((item) => item.price > 10000);
-            }
-        }
-    };
     const handleFavorites = (itemId) => {
         if (favorites.data.includes(itemId)) {
             toast.error("Удалено из избранного!");
         }
         dispatch(toggleFavorites(itemId));
     };
+
+    const handleCarts = (itemId) => {
+        if (cart.data.includes(itemId)) {
+            toast.error("Удалено из корзины!");
+        } else {
+            toast.success("Добавлено в корзину!");
+            dispatch(addCart(itemId));
+        }
+
+    };
+
     return (
         <section className='favorites'>
             <div className='container'>
+                <h1 className="favorites__title">Избранные товары</h1>
                 <div className='favorites__block'>
-                    {/* Вставляем Aside в левую часть */}
-                    <Aside onFilterChange={handleFilterChange} />
 
-                    {/* Блок с карточками */}
                     <div className='favorites__cards'>
-                        {filteredData
-                            .filter((item) => favorites.data.includes(item.id))
+                        {data.filter((item) => favorites.data.includes(item.id))
                             .map((item) => (
                                 <div className='favorites__card' key={item.id}>
                                     <div className='favorites__card-block'>
@@ -93,9 +85,9 @@ const Favorites = () => {
                                                 </div>
                                             </div>
                                             <div className='favorites__card-price-wrapper'>
-                                                <p className='favorites__card-price'>{item.price} ₽</p>
+                                                <p className='favorites__card-price'>{item.price.toLocaleString()} ₽</p>
                                             </div>
-                                            <button className='add-to-cart'>
+                                            <button className='add-to-cart'  onClick={() => handleCarts(item.id)} >
                                                 <span>В корзину</span>
                                             </button>
                                         </div>

@@ -3,14 +3,16 @@ import './Card.scss';
 import { MdFavoriteBorder, MdFavorite, MdOutlineLocalGroceryStore } from "react-icons/md";
 import { LiaSignalSolid } from "react-icons/lia";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllProducts } from "../../store/reducers/products.js";
-import { toggleFavorites } from "../../store/reducers/favorites.js";
+import { getAllProducts } from "../../store/reducers/products";
+import { toggleFavorites } from "../../store/reducers/favorites";
 import { toast } from "react-toastify";
+import { addCart } from "../../store/reducers/carts.js";
 
 const Card = () => {
     const { data, filter } = useSelector((state) => state.products);
     const favorites = useSelector((state) => state.favorites);
     const dispatch = useDispatch();
+    const cart = useSelector((state) => state.carts);
 
     useEffect(() => {
         dispatch(getAllProducts(filter.filterPrice));
@@ -24,12 +26,21 @@ const Card = () => {
         }
         dispatch(toggleFavorites(itemId));
     };
+    const handleCarts = (itemId) => {
+        if (cart.data.includes(itemId)) {
+            toast.error("Удалено из корзины!");
 
+        } else {
+            toast.success("Добавлено в корзину!");
+            dispatch(addCart(itemId));
+        }
+
+    };
     return (
         <div className="card-container">
             {data && data.length > 0 ? (
                 data.filter((item, idx) => {
-                    return idx >= filter.page * 8 - 8 && idx < filter.page * 8
+                    return idx >= filter.page * 12 - 12 && idx < filter.page * 12;
                 }).map((item) => (
                     <div className="card" key={item.id}>
                         <img src={item.img} alt={item.title} className="card__img" />
@@ -41,7 +52,7 @@ const Card = () => {
                         </p>
                         <div className="card__wrapper">
                             <div className="card__left">
-                                <h3 className="card__price">{item.price} ₽</h3>
+                                <h3 className="card__price">{item.price.toLocaleString('ru-RU')} ₽</h3>
                             </div>
                             <div className="card__right">
                                 <button
@@ -58,7 +69,7 @@ const Card = () => {
                                     <LiaSignalSolid className="card__comparison-icon" />
                                 </button>
                                 <button className="card__add-to-cart">
-                                    <MdOutlineLocalGroceryStore className="card__basket-icon" />
+                                    <MdOutlineLocalGroceryStore className="card__basket-icon" onClick={() => handleCarts(item.id)} />
                                 </button>
                             </div>
                         </div>

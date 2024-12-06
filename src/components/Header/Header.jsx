@@ -12,6 +12,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import {useDispatch, useSelector} from "react-redux";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { IoIosSearch } from "react-icons/io";
+import {logOut} from "../../store/reducers/user";
+
 const Header = () => {
     const user = useSelector(s => s.user)
     const [isOpen, setIsOpen] = useState(false);
@@ -19,23 +21,22 @@ const Header = () => {
     const togglePopup = () => {
         setIsOpen(!isOpen);
     };
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
-    const handleBackgroundClick = (e) => {
-        if (e.target.className === 'number-popup') {
-            setIsOpen(false);
-        }
+    const handleLogOut = () => {
+        dispatch(logOut()); // Очищаем данные пользователя в Redux
+        navigate('/'); // Перенаправляем на главную страницу или другую
     };
-    const handleKeyDown = (e) => {
-        if (e.key === 'Escape') {
-            setIsOpen(false);
-        }
-    };
+
     return (
         <header className='header'>
             <div className="container">
                 <div className="header__block">
                     <div className="header__left">
-                        <img src={Logo} className='header__logo' alt=""/>
+                        <Link to="/">
+                            <img src={Logo} className='header__logo' alt=""/>
+                        </Link>
                         <Link to="/Catalog" role='button' className="header__catalog">
                             <span>Каталог</span>
                         </Link>
@@ -57,10 +58,10 @@ const Header = () => {
                         </Link>
                         {
                             user.status === 'success' ?
-                                <Link to='/profile' className='header__link'>
+                                <div role='btn' onClick={handleLogOut}  className='header__link'>
                                     <CiUser className='header__link-icons'/>
-                                    <p>Профиль</p>
-                                </Link> :
+                                    <p>Выйти</p>
+                                </div> :
                                 <Link to='/Login' className='header__link'>
                                     <CiUser className='header__link-icons'/>
                                     <p>Войти</p>
